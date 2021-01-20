@@ -1,52 +1,85 @@
 {
-	"executionRoleArn": "arn:aws:iam::171421398129:role/ECS-Execute-Role",
-	"containerDefinitions": [{
-		"logConfiguration": {
-			"logDriver": "awslogs",
-			"options": {
-				"awslogs-group": "New-Nodejs",
-				"awslogs-region": "us-east-1",
-				"awslogs-stream-prefix": "/"
-			},
-			"portMappings": [{
-				"hostPort": 0,
-				"protocol": "tcp",
-				"containerPort": 8081
-			}],
-			"cpu": 0,
-			"environment": [{
-				"name": "NODE_ENV",
-				"value": "Testing"
-			}],
-			"memory": 256,
-			"memoryReservation": 128,
-			"image": "171421398129.dkr.ecr.us-east-1.amazonaws.com/171421398129.dkr.ecr.us-east-1.amazonaws.com/buddy-docker-images:latest",
-			"name": "ECS-Container"
-		}
-	}],
-	"compatibilities": [
-		"EC2"
-	],
-	"taskDefinitionArn": "arn:aws:ecs:us-east-1:171421398129:task-definition/ECS-TaskDefination:1",
-	"family": "ECS-TaskDefination",
-	"requiresAttributes": [{
-			"targetId": null,
-			"targetType": null,
-			"value": null,
-			"name": "com.amazonaws.ecs.capability.ecr-auth"
-		},
-		{
-			"targetId": null,
-			"targetType": null,
-			"value": null,
-			"name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-		}
-	],
-	"pidMode": null,
-	"requiresCompatibilities": [
-		"EC2"
-	],
-	"networkMode": "bridge",
-	"revision": 1,
-	"status": "ACTIVE"
+  "ipcMode": null,
+  "executionRoleArn": null,
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": null,
+      "environmentFiles": null,
+      "logConfiguration": null,
+      "entryPoint": null,
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "protocol": "tcp",
+          "containerPort": 8081
+        }
+      ],
+      "command": null,
+      "linuxParameters": null,
+      "cpu": 0,
+      "environment": [],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": null,
+      "mountPoints": [],
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": null,
+      "memory": 256,
+      "memoryReservation": 128,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "171421398129.dkr.ecr.us-east-1.amazonaws.com/171421398129.dkr.ecr.us-east-1.amazonaws.com/buddy-docker-images:latest",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": null,
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": null,
+      "name": "ECS-Container"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": null,
+  "taskRoleArn": null,
+  "compatibilities": [
+    "EC2"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:171421398129:task-definition/ECS-TaskDefination:1",
+  "family": "ECS-TaskDefination",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    }
+  ],
+  "pidMode": null,
+  "requiresCompatibilities": [
+    "EC2"
+  ],
+  "networkMode": "bridge",
+  "cpu": null,
+  "revision": 1,
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
+  "volumes": []
 }
