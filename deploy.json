@@ -1,20 +1,52 @@
 {
-  "Type" : "AWS::ECS::TaskDefinition",
-  "Properties" : {
-      "ContainerDefinitions" : [ ContainerDefinition, ... ],
-      "Cpu" : String,
-      "ExecutionRoleArn" : String,
-      "Family" : String,
-      "InferenceAccelerators" : [ InferenceAccelerator, ... ],
-      "IpcMode" : String,
-      "Memory" : String,
-      "NetworkMode" : String,
-      "PidMode" : String,
-      "PlacementConstraints" : [ TaskDefinitionPlacementConstraint, ... ],
-      "ProxyConfiguration" : ProxyConfiguration,
-      "RequiresCompatibilities" : [ String, ... ],
-      "Tags" : [ Tag, ... ],
-      "TaskRoleArn" : String,
-      "Volumes" : [ Volume, ... ]
-    }
+	"executionRoleArn": "arn:aws:iam::171421398129:role/ECS-Execute-Role",
+	"containerDefinitions": [{
+		"logConfiguration": {
+			"logDriver": "awslogs",
+			"options": {
+				"awslogs-group": "New-Nodejs",
+				"awslogs-region": "us-east-1",
+				"awslogs-stream-prefix": "/"
+			},
+			"portMappings": [{
+				"hostPort": 0,
+				"protocol": "tcp",
+				"containerPort": 8081
+			}],
+			"cpu": 0,
+			"environment": [{
+				"name": "NODE_ENV",
+				"value": "Testing"
+			}],
+			"memory": 256,
+			"memoryReservation": 128,
+			"image": "171421398129.dkr.ecr.us-east-1.amazonaws.com/171421398129.dkr.ecr.us-east-1.amazonaws.com/buddy-docker-images:latest",
+			"name": "ECS-Container"
+		}
+	}],
+	"compatibilities": [
+		"EC2"
+	],
+	"taskDefinitionArn": "arn:aws:ecs:us-east-1:171421398129:task-definition/ECS-TaskDefination:1",
+	"family": "ECS-TaskDefination",
+	"requiresAttributes": [{
+			"targetId": null,
+			"targetType": null,
+			"value": null,
+			"name": "com.amazonaws.ecs.capability.ecr-auth"
+		},
+		{
+			"targetId": null,
+			"targetType": null,
+			"value": null,
+			"name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+		}
+	],
+	"pidMode": null,
+	"requiresCompatibilities": [
+		"EC2"
+	],
+	"networkMode": "bridge",
+	"revision": 1,
+	"status": "ACTIVE"
 }
