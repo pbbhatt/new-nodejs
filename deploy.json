@@ -26,7 +26,6 @@
 	}],
 	"taskRoleArn": null,
 	"family": "ECS-TaskDefination",
-	"requiresAttributes": [],
 	"requiresCompatibilities": [
 		"EC2"
 	],
