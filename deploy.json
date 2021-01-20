@@ -9,7 +9,6 @@
 				"awslogs-stream-prefix": "/"
 			},
 			"portMappings": [{
-				"hostPort": 0,
 				"protocol": "tcp",
 				"containerPort": 8081
 			}],
@@ -21,10 +20,11 @@
 			"memory": 256,
 			"memoryReservation": 128,
 			"image": "171421398129.dkr.ecr.us-east-1.amazonaws.com/171421398129.dkr.ecr.us-east-1.amazonaws.com/buddy-docker-images:latest",
+			"essential": true,
+			"privileged": true,
 			"name": "ECS-Container"
 		}
 	}],
-	"taskRoleArn": null,
 	"family": "ECS-TaskDefination",
 	"requiresCompatibilities": [
 		"EC2"
