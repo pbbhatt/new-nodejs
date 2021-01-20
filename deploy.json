@@ -30,6 +30,5 @@
 		"EC2"
 	],
 	"networkMode": "bridge",
-	"revision": 1,
 	"status": "ACTIVE"
 }
