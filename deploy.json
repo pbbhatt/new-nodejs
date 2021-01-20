@@ -24,7 +24,7 @@
 			"name": "ECS-Container"
 		}
 	}],
-	"taskDefinitionArn": "arn:aws:ecs:us-east-1:171421398129:task-definition/ECS-TaskDefination:1",
+	"taskRoleArn": null,
 	"family": "ECS-TaskDefination",
 	"requiresAttributes": [],
 	"requiresCompatibilities": [
