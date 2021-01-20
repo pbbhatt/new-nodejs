@@ -29,6 +29,5 @@
 	"requiresCompatibilities": [
 		"EC2"
 	],
-	"networkMode": "bridge",
-	"status": "ACTIVE"
+	"networkMode": "bridge"
 }
