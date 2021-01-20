@@ -26,20 +26,7 @@
 	}],
 	"taskDefinitionArn": "arn:aws:ecs:us-east-1:171421398129:task-definition/ECS-TaskDefination:1",
 	"family": "ECS-TaskDefination",
-	"requiresAttributes": [{
-			"targetId": null,
-			"targetType": null,
-			"value": null,
-			"name": "com.amazonaws.ecs.capability.ecr-auth"
-		},
-		{
-			"targetId": null,
-			"targetType": null,
-			"value": null,
-			"name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-		}
-	],
-	"pidMode": null,
+	"requiresAttributes": [],
 	"requiresCompatibilities": [
 		"EC2"
 	],
