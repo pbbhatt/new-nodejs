@@ -25,7 +25,7 @@
                 }
             ],
             "mountPoints": [],
-            "memory": 512,
+            "memory": 256,
             "volumesFrom": [],
             "image": "171421398129.dkr.ecr.us-east-1.amazonaws.com/171421398129.dkr.ecr.us-east-1.amazonaws.com/buddy-docker-images:latest",
             "essential": true,
