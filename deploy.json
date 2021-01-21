@@ -1,42 +1,38 @@
 {
-    "executionRoleArn": "arn:aws:iam::171421398129:role/ECS-Execute-Role",
-    "containerDefinitions": [
-        {
-            "logConfiguration": {
-                "logDriver": "awslogs",
-                "options": {
-                    "awslogs-group": "New-Nodejs",
-                    "awslogs-region": "us-east-1",
-                    "awslogs-stream-prefix": "/"
-                }
-            },
-            "portMappings": [
-                {
-                    "hostPort": 8081,
-                    "protocol": "tcp",
-                    "containerPort": 8081
-                }
-            ],
-            "cpu": 0,
-            "environment": [
-                {
-                    "name": "NODE_ENV",
-                    "value": "production"
-                }
-            ],
-            "mountPoints": [],
-            "memory": 128,
-            "volumesFrom": [],
-            "image": "171421398129.dkr.ecr.us-east-1.amazonaws.com/171421398129.dkr.ecr.us-east-1.amazonaws.com/buddy-docker-images:latest",
-            "essential": true,
-            "privileged": true,
-            "name": "ECS-Container"
-        }
-    ],
-    "taskRoleArn": "arn:aws:iam::171421398129:role/aws-LogDrive-Create-Policy",
-    "family": "ECS-TaskDefination",
-    "requiresCompatibilities": [],
-    "inferenceAccelerators": [],
-    "volumes": [],
-    "placementConstraints": []
+	"executionRoleArn": "arn:aws:iam::171421398129:role/ECS-Execute-Role",
+	"containerDefinitions": [{
+		"logConfiguration": {
+			"logDriver": "awslogs",
+			"options": {
+				"awslogs-group": "New-Nodejs",
+				"awslogs-region": "us-east-1",
+				"awslogs-stream-prefix": "/"
+			}
+		},
+		"portMappings": [{
+			"hostPort": 8081,
+			"protocol": "tcp",
+			"containerPort": 8081
+		}],
+		"cpu": 0,
+		"environment": [{
+			"name": "NODE_ENV",
+			"value": "production"
+		}],
+		"mountPoints": [],
+		"memory": 512,
+		"volumesFrom": [],
+		"image": "171421398129.dkr.ecr.us-east-1.amazonaws.com/171421398129.dkr.ecr.us-east-1.amazonaws.com/buddy-docker-images:latest",
+		"essential": true,
+		"privileged": true,
+		"name": "ECS-Container"
+	}],
+	"taskRoleArn": "arn:aws:iam::171421398129:role/aws-LogDrive-Create-Policy",
+	"family": "ECS-TaskDefination",
+	"compatibilities": [
+		"EC2"
+	],
+	"inferenceAccelerators": [],
+	"volumes": [],
+	"placementConstraints": []
 }
