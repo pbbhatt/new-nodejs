@@ -12,9 +12,9 @@
             },
             "portMappings": [
                 {
-                    "hostPort": 8083,
+                    "hostPort": 8081,
                     "protocol": "tcp",
-                    "containerPort": 8083
+                    "containerPort": 8081
                 }
             ],
             "cpu": 0,
