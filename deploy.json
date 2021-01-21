@@ -33,6 +33,7 @@
             "name": "ECS-Container"
         }
     ],
+    "taskRoleArn": "arn:aws:iam::171421398129:role/aws-LogDrive-Create-Policy",
     "family": "ECS-TaskDefination",
     "requiresCompatibilities": [],
     "inferenceAccelerators": [],
