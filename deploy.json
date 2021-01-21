@@ -29,9 +29,10 @@
 	}],
 	"taskRoleArn": "arn:aws:iam::171421398129:role/aws-LogDrive-Create-Policy",
 	"family": "ECS-TaskDefination",
-	"compatibilities": [
+	"requiresCompatibilities": [
 		"EC2"
 	],
+	"networkMode": "bridge",
 	"inferenceAccelerators": [],
 	"volumes": [],
 	"placementConstraints": []
