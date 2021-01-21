@@ -13,6 +13,7 @@
 			},
 			"portMappings": [{
 				"protocol": "tcp",
+				"hostPort": 8081
 				"containerPort": 8081
 			}],
 			"cpu": 512,
