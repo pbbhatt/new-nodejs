@@ -1,0 +1,38 @@
+{
+	"executionRoleArn": "arn:aws:iam::171421398129:role/ECS-Execute-Role",
+	"containerDefinitions": [{
+		"logConfiguration": {
+			"logDriver": "awslogs",
+			"options": {
+				"awslogs-group": "New-Nodejs",
+				"awslogs-region": "us-east-1",
+				"awslogs-stream-prefix": "/"
+			}
+		},
+		"portMappings": [{
+			"hostPort": 8081,
+			"protocol": "tcp",
+			"containerPort": 8081
+		}],
+		"cpu": 0,
+		"environment": [{
+			"name": "NODE_ENV",
+			"value": "production"
+		}],
+		"mountPoints": [],
+		"memory": 256,
+		"volumesFrom": [],
+		"image": "171421398129.dkr.ecr.us-east-1.amazonaws.com/171421398129.dkr.ecr.us-east-1.amazonaws.com/buddy-docker-images:latest",
+		"essential": true,
+		"privileged": true,
+		"name": "ecs-container-taskdef-2"
+	}],
+	"taskRoleArn": "arn:aws:iam::171421398129:role/aws-LogDrive-Create-Policy",
+	"family": "ecs-taskdef-2",
+	"requiresCompatibilities": [],
+	"networkMode": "bridge",
+	"inferenceAccelerators": [],
+	"volumes": [],
+	"placementConstraints": []
+}
+© 2021 GitHub, Inc.
